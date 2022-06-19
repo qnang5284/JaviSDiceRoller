@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JaviSDiceRoller</title>
+    <script src="assets/scripts/dicey-in-out.js" defer></script>
+    <script src="assets/scripts/diceroller.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>JaviSDiceRoller</h1>
+    </header>
+    <section id="calculator">
+      <div id="dice-num-input" class="dice-input">
+        <label>N&uacute;mero de dados</label>
+        <input
+          type="number"
+          id="number-of-dice"
+          size="1"
+          max="10"
+          maxlength="2"
+          width="2"
+          value="1"
+        />
+      </div>
+      <div id="mod-input" class="dice-input">
+        <label>A&ntilde;adir modificador</label>
+        <input type="number" id="modifier" size="1" />
+      </div>
+      <div id="adv-disadv">
+        <label>Ventaja/Desventaja</label>
+        <div id="adv-disadv-select">
+          <div>
+            <input type="radio" id="normal-roll" value="0" checked />
+            <label for="normal-roll">Normal</label>
+          </div>
+          <div>
+            <input type="radio" id="adv-roll" value="1" />
+            <label for="adv-roll">Ventaja</label>
+          </div>
+          <div>
+            <input type="radio" id="normal-roll" value="2" />
+            <label for="disadv-roll">Desventaja</label>
+          </div>
+        </div>
+      </div>
+      <div id="roll-a-die">
+        <button type="button" id="btn-d100" value="100" >D100</button>
+        <button type="button" id="btn-d20" value="20" >D20</button>
+        <button type="button" id="btn-d12" value="12" >D12</button>
+        <button type="button" id="btn-d10" value="10" >D10</button>
+        <button type="button" id="btn-d8" value="8" >D8</button>
+        <button type="button" id="btn-d6" value="6" >D6</button>
+        <button type="button" id="btn-d4" value="4" >D4</button>
+        <input
+          type="number"
+          id="num-faces"
+          maxlength="2"
+          label="Personalizado"
+        />
+        <button type="button" id="btn-custom">
+          D<span id="btn-num-faces"></span>
+        </button>
+      </div>
+    </section>
+    <section id="roll-log">
+      <h2 id="current-roll"></h2>
+      <!-- Results of each dice separatedly -->
+      <h2>Result: <span id="current-result"></span></h2>
+      <!-- The summatory of every dice rolled plus modifiers, if any -->
+      <h2>Total result: <span id="total-result"></span></h2>
+    </section>
+    <section id="roll-text-log">
+      <textarea
+        id="all-results-logger"
+        label="Log"
+        readonly
+        rows="20"
+        cols="70"
+      >
+      </textarea>
+    </section>
+  </body>
+</html>
