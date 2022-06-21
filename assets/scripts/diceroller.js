@@ -1,3 +1,67 @@
+function getUserInput() {
+  return { 
+    numDice: numDie.value, 
+    dieFaces: customDieFaces.value, 
+    rollType: rollType.value
+  };
+}
+
+function rollD100() {
+  const userInput = getUserInput();
+  const result = makeRoll(userInput.numDice, 100, userInput.rollType);
+  return result;
+}
+d100.addEventListener('click', rollD100);
+
+function rollD20() {
+  const userInput = getUserInput();
+  const result = makeRoll(userInput.numDice, 20, userInput.rollType);
+  return result;
+}
+d20.addEventListener('click', rollD20);
+
+function rollD12() {
+  const userInput = getUserInput();
+  const result = makeRoll(userInput.numDice, 12, userInput.rollType);
+  return result;
+}
+d12.addEventListener('click', rollD12);
+
+function rollD10() {
+  const userInput = getUserInput();
+  const result = makeRoll(userInput.numDice, 10, userInput.rollType);
+  return result;
+}
+d10.addEventListener('click', rollD10);
+
+function rollD8() {
+  const userInput = getUserInput();
+  const result = makeRoll(userInput.numDice, 8, userInput.rollType);
+  return result;
+}
+d8.addEventListener('click', rollD8);
+
+function rollD6() {
+  const userInput = getUserInput();
+  const result = makeRoll(userInput.numDice, 6, userInput.rollType);
+  return result;
+}
+d6.addEventListener('click', rollD6);
+
+function rollD4() {
+  const userInput = getUserInput();
+  const result = makeRoll(userInput.numDice, 4, userInput.rollType);
+  return result;
+}
+d4.addEventListener('click', rollD4);
+
+function rolrollCustomDice() {
+  const userInput = getUserInput();
+  const result = makeRoll(userInput.numDice, userInput.numFaces, userInput.rollType);
+  return result;
+}
+customDie.addEventListener('click', rollCustomDice);
+
 /**
  * Returns a random number.
  * @param {*} numFaces

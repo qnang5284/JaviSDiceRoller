@@ -13,8 +13,8 @@ const d6 = document.getElementById("btn-d6");
 const d4 = document.getElementById("btn-d4");
 
 // Custom dice
-const customDiceFaces = document.getElementById("btn-custom");
-const customDie = document.getElementById("num-faces");
+const customDie = document.getElementById("btn-custom");
+const customDieFaces = document.getElementById("num-faces");
 
 // Logs
 const currentRoll = document.getElementById("current-roll");
@@ -22,10 +22,11 @@ const currentResult = document.getElementById("current-result");
 const currentTotalResul = document.getElementById("total-result");
 const rollLog = document.getElementById("roll-text-log");
 
-/* 
-    Returns if we're working with a normal roll (0, default), 
-    rolling with advantage (1) or rolling with disadvantage (2)
-*/
+/**
+ * Returns if we're working with a normal roll (0, default), 
+ * rolling with advantage (1) or rolling with disadvantage (2)
+ * @returns 0, 1, or 2
+ */
 function getRollType() {
   var rollType = 0;
   const normalRoll = document.getElementById("normal-roll");
