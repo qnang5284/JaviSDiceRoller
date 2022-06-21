@@ -28,24 +28,11 @@
       </div>
       <div id="mod-input" class="dice-input">
         <label>A&ntilde;adir modificador</label>
-        <input type="number" id="modifier" size="1" />
+        <input type="number" id="modifier" size="1" value="0"/>
       </div>
       <div id="adv-disadv">
-        <label>Ventaja/Desventaja</label>
-        <div id="adv-disadv-select">
-          <div>
-            <input type="radio" id="normal-roll" value="0" checked />
-            <label for="normal-roll">Normal</label>
-          </div>
-          <div>
-            <input type="radio" id="adv-roll" value="1" />
-            <label for="adv-roll">Ventaja</label>
-          </div>
-          <div>
-            <input type="radio" id="normal-roll" value="2" />
-            <label for="disadv-roll">Desventaja</label>
-          </div>
-        </div>
+        <button type="button" id="btn-d20-adv" value="20" >D20 Ventaja</button>
+        <button type="button" id="btn-d20-diasadv" value="20" >D20 Desventaja</button>
       </div>
       <div id="roll-a-die">
         <button type="button" id="btn-d100" value="100" >D100</button>
@@ -55,15 +42,17 @@
         <button type="button" id="btn-d8" value="8" >D8</button>
         <button type="button" id="btn-d6" value="6" >D6</button>
         <button type="button" id="btn-d4" value="4" >D4</button>
+      </div>
+      <div id="custom-dice-section">
+        <button type="button" id="btn-custom">
+          D<span id="btn-num-faces"></span>
+        </button>
         <input
           type="number"
           id="num-faces"
           maxlength="2"
           label="Personalizado"
         />
-        <button type="button" id="btn-custom">
-          D<span id="btn-num-faces"></span>
-        </button>
       </div>
     </section>
     <section id="roll-log">
