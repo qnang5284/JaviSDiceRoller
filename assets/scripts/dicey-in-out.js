@@ -18,5 +18,5 @@ const customDieFaces = document.getElementById("num-faces");
 // Logs
 const currentRoll = document.getElementById("current-roll");
 const currentResult = document.getElementById("current-result");
-const currentTotalResul = document.getElementById("total-result");
+const currentTotalResult = document.getElementById("total-result");
 const rollLog = document.getElementById("roll-text-log");

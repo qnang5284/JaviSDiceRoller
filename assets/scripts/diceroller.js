@@ -100,9 +100,11 @@ function writeResult (userInput, result) {
     rollDesc += " - " + userInput.modifier*-1;
   }
   currentRoll.textContent = rollDesc;
+  let allRolls = "";
   for (const res of result) {
-    console.log(res);
+    allRolls += res + " \n";
   }
+  rollLog.textContent = allRolls;
 }
 
 /**
